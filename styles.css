@@ -6,9 +6,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #FFFFFF;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #0A0F1E; /* deep navy black */
+    color: #EAEAEA; /* soft off-white */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,52 +16,71 @@ body {
 }
 
 .container {
-    background-color: #1E1E1E;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #141A2A, #0D1220); /* subtle gradient */
+    padding: 24px;
+    border-radius: 16px;
+    width: 420px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08); /* subtle glassy border */
 }
 
 h1 {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 26px;
+    color: #00E0FF; /* neon cyan accent */
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .input-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    gap: 10px;
 }
 
 input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    background-color: #333333;
-    border: none;
-    border-radius: 5px;
-    color: #FFF;
+    flex: 1;
+    padding: 12px;
+    background-color: #1B2335;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #EAEAEA;
     outline: none;
+    font-size: 15px;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #00E0FF;
+    background: #111827;
 }
 
 button {
-    width: 25%;
-    padding: 10px;
-    background-color: #6200EA;
+    min-width: 100px;
+    padding: 12px;
+    background: linear-gradient(135deg, #00E0FF, #0077FF);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     color: #FFF;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 15px;
+    font-weight: 500;
+    transition: transform 0.2s, box-shadow 0.3s;
 }
 
 button:hover {
-    background-color: #3700B3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 224, 255, 0.3);
 }
 
 #weather-info {
-    margin-top: 20px;
+    margin-top: 24px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .hidden {
@@ -69,6 +88,7 @@ button:hover {
 }
 
 #error-message {
-    color: #FF5722;
+    color: #FF4E6A; /* pink-red accent for errors */
     margin-top: 20px;
+    font-weight: 500;
 }
